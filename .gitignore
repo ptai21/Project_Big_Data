@@ -1,0 +1,67 @@
+# --- 1. Dependencies & Environments (Rất quan trọng) ---
+# Node (Frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (Backend & Spark Jobs)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+.venv_be
+venv/
+ENV/
+env/
+# Các file zip dependencies của Spark (thường được build ra khi submit job)
+deps.zip
+deps_01.zip
+libs.zip
+
+# --- 2. Data Files & Large Files (Tránh push dữ liệu nặng lên Git) ---
+# Thư mục chứa kết quả phân tích
+analysis_results/
+# Thư mục chứa data gốc và data xử lý
+data/
+# File CSV/JSON lẻ tẻ trong các thư mục con
+*.csv
+*.json
+*.parquet
+# Riêng file cấu hình json nhỏ thì có thể giữ lại, nhưng file data lớn thì ignore
+# Nếu bạn muốn giữ lại file mapping nhỏ (VD: zipcode_to_city.json),
+
+source/utils/zipcode_to_city.json
+
+# File log (Sinh ra khi chạy job)
+*.log
+logs/
+source/logs/
+
+# --- 3. IDE & System Files (File rác hệ thống) ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- 4. Build Output (Frontend) ---
+washington-recsys-backend/washington-frontend/build/
+washington-recsys-backend/washington-frontend/dist/
+washington-recsys-backend/washington-frontend_v1/build/
+washington-recsys-backend/washington-frontend_v1/dist/
+washington-recsys-backend/washington-frontend_v1/.env
+# --- 5. Spark & Big Data Specific ---
+warehouse/
+metastore_db/
+derby.log
+checkpoint/
+spark-warehouse/
+
+# --- 6. Temporary/Debug Scripts (Tùy chọn) ---
+# Nếu bạn không muốn push các file test/debug tạm thời
+source/debug_*.py
+source/test.py
+washington-recsys-backend/test.py
