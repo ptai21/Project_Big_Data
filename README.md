@@ -136,9 +136,9 @@ flowchart TD
     InstallOption -->|Cài đặt bằng Docker| Docker[Hướng dẫn cài Docker]
     InstallOption -->|Cài đặt thủ công trên Ubuntu| Manual[Hướng dẫn cài đặt thủ công trên Ubuntu]
     Manual --> InstallHadoop
-    InstallKafka --> InstallSpark
-    InstallPostgress --> Postgress
-    InstallAirflow --> Finish([Hoàn thành cài đặt])
+    InstallHadoop -->  InstallSpark
+    InstallSpark --> InstallPostgress
+    InstallPostgress --> Finish([Hoàn thành cài đặt])
 ```
 
 ### 1. Cài Đặt Hadoop Trên Ubuntu
@@ -359,5 +359,12 @@ pyspark
 -------
 
 
+# Terminal 1 - Backend
+cd ~/bigdata/washington-recsys-backend
+source .venv_be/bin/activate
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
+# Terminal 2 - Frontend
+cd ~/bigdata/washington-recsys-backend/washington-frontend
+npm start
 
