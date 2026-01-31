@@ -56,10 +56,10 @@ Gồm hai phần gồm cấu trúc thư mục thực hiện luồng xử lý d�
 
     - Extract: Đọc dữ liệu từ HDFS.
     - Transform: Làm sạch, chuẩn hóa, xử lý định dạng dữ liệu (chuyển đổi kiểu dữ liệu, tách thể loại, chuẩn hóa thời gian,...).
-    - Load: Lưu lại dữ liệu đã xử lý vào một thư mục HDFS mới 
+    - Load: Lưu lại dữ liệu đã xử lý vào một thư mục HDFS mới .
 - Apache Spark được tích hợp để xử lý nâng cao dữ liệu, ví dụ:
-    - Lọc và phân loại review theo điểm đánh giá
-    - Phân tích doanh nghiệp dựa vào các review và thời gian\
+    - Lọc và phân loại review theo điểm đánh giá.
+    - Phân tích doanh nghiệp dựa vào các review và thời gian.
     - Sentiment text rivew, classification group category.
     - Tạo các bảng tổng hợp phục vụ phân tích
 
